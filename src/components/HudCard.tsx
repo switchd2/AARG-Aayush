@@ -56,7 +56,7 @@ export default function HudCard({
           <div className="mb-4 border-b border-white/5 pb-3 font-mono relative z-10">
             {eyebrow && (
               <div className="text-[9px] uppercase tracking-widest text-primary-accent font-bold">
-                {"///"} {eyebrow}
+                {eyebrow}
               </div>
             )}
             {title && (
@@ -105,7 +105,7 @@ export default function HudCard({
         <div className="mb-4 border-b border-white/5 pb-3 font-mono relative z-10">
           {eyebrow && (
             <div className="text-[9px] uppercase tracking-widest text-primary-accent font-bold">
-              {"///"} {eyebrow}
+              {eyebrow}
             </div>
           )}
           {title && (

@@ -107,7 +107,7 @@ export default function Lightbox({
           {/* Top Header Controls */}
           <div className="flex w-full items-center justify-between py-2 border-b border-secondary-accent/15">
             <span className="font-mono text-[10px] tracking-widest text-primary-accent font-semibold">
-              {"/// HUD_LIGHTBOX // IMAGE"} {currentIndex + 1} {"OF"} {items.length}
+              {"HUD_LIGHTBOX // IMAGE"} {currentIndex + 1} {"OF"} {items.length}
             </span>
             <button
               ref={closeButtonRef}

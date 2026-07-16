@@ -105,7 +105,7 @@ export default function Footer() {
         {/* Quick Links */}
         <div className="flex flex-col gap-4">
           <h4 className="text-primary-accent font-bold uppercase tracking-widest text-[10px]">
-            {"/// QUICK_LINKS"}
+            {"QUICK_LINKS"}
           </h4>
           <nav className="grid grid-cols-2 gap-2 text-secondary-accent/80 font-medium">
             {quickLinks.map((link) => (
@@ -129,7 +129,7 @@ export default function Footer() {
         {/* Contact Block */}
         <div className="flex flex-col gap-4">
           <h4 className="text-primary-accent font-bold uppercase tracking-widest text-[10px]">
-            {"/// CONTACT_TELEMETRY"}
+            {"CONTACT_TELEMETRY"}
           </h4>
           <div className="flex flex-col gap-3 text-secondary-accent/80">
             <div className="flex items-start gap-2 leading-relaxed font-sans">
@@ -166,7 +166,7 @@ export default function Footer() {
         {/* GPS Coordinates/Telemetry panel */}
         <div className="flex flex-col gap-4">
           <h4 className="text-primary-accent font-bold uppercase tracking-widest text-[10px]">
-            {"/// SITE_METRICS"}
+            {"SITE_METRICS"}
           </h4>
           <div className="border border-secondary-accent/15 bg-surface/30 p-4 relative h-32 flex flex-col justify-between">
             <div className="hud-corner hud-corner-tl" />

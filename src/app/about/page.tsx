@@ -3,7 +3,7 @@
 import React from "react";
 import { siteConfig } from "@/content/site";
 import ScrollReveal from "@/components/ScrollReveal";
-import DecryptText from "@/components/DecryptText";
+
 import { Target, Compass } from "lucide-react";
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
         <div className="border-b border-secondary-accent/15 pb-6">
           <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-primary-accent" />
-            <DecryptText text="/// OPERATIONAL SYSTEM // ABOUT_AARG" />
+            OPERATIONAL_SYSTEM // ABOUT_AARG
           </span>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
             Who We Are &amp; Why We Fly

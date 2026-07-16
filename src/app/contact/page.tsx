@@ -72,7 +72,7 @@ export default function Contact() {
         <div className="border-b border-secondary-accent/15 pb-6">
           <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-primary-accent" />
-            {"/// COMMUNICATIONS_DECK // CONTACT"}
+            {"COMMUNICATIONS_DECK // CONTACT"}
           </span>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
             Connect With AARG
@@ -200,7 +200,7 @@ export default function Contact() {
                 {/* Styled Map Placeholder representing laboratory location */}
                 <div className="absolute inset-0 bg-bg-base/80 p-6 flex flex-col justify-between font-mono text-[10px] text-secondary-accent/70 hud-grid">
                   <div className="flex justify-between items-center text-primary-accent font-bold">
-                    <span>{"/// GOOGLE_MAPS_FEED"}</span>
+                    <span>{"GOOGLE_MAPS_FEED"}</span>
                     <span className="text-[8px] border border-primary-accent/30 px-1 py-0.5 rounded-sm">{"GPS_OK"}</span>
                   </div>
                   <div className="text-center py-4 text-xs font-sans text-secondary-accent/80 font-semibold uppercase tracking-wider">
@@ -229,7 +229,7 @@ export default function Contact() {
 
                 <div className="border-b border-secondary-accent/15 pb-4 mb-6 font-mono">
                   <span className="text-[10px] text-primary-accent font-bold uppercase tracking-widest">
-                    {"/// TRANSMISSION_FORM"}
+                    {"TRANSMISSION_FORM"}
                   </span>
                   <h3 className="font-display text-lg font-bold text-secondary-accent uppercase mt-1">
                     ESTABLISH DUPLEX COMMS

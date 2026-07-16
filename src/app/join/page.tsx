@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/content/site";
 import ScrollReveal from "@/components/ScrollReveal";
-import DecryptText from "@/components/DecryptText";
+
 import { UserPlus, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -63,7 +63,7 @@ export default function Join() {
         <div className="border-b border-secondary-accent/15 pb-6">
           <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-primary-accent" />
-            <DecryptText text="/// SQUADRON_RECRUITMENT // JOIN" />
+            SQUADRON_RECRUITMENT // JOIN
           </span>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
             Recruitment Command

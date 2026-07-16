@@ -5,7 +5,7 @@ import { domains } from "@/content/domains";
 import { vehicles } from "@/content/vehicles";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
-import DecryptText from "@/components/DecryptText";
+
 import { Wrench, Battery, Cpu, Landmark, Compass, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
@@ -64,7 +64,7 @@ export default function Domains() {
           <div className="border-b border-secondary-accent/15 pb-6">
             <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary-accent" />
-              <DecryptText text="/// UAV_SYSTEMS_DIVISIONS // STRUCTURES" />
+              UAV_SYSTEMS_DIVISIONS // STRUCTURES
             </span>
             <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
               Technical Domains
@@ -252,7 +252,7 @@ export default function Domains() {
           <div className="border-b border-secondary-accent/15 pb-6">
             <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-primary-accent" />
-              <DecryptText text="/// PHYSICAL_DEPLOYMENT_SPEC // VEHICLE_PORTFOLIO" />
+              PHYSICAL_DEPLOYMENT_SPEC // VEHICLE_PORTFOLIO
             </span>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
               UAV Vehicle Specification Sheets
@@ -306,7 +306,7 @@ export default function Domains() {
                       {/* Identity */}
                       <div className="flex flex-col gap-1">
                         <span className="font-mono text-[10px] text-primary-accent font-bold uppercase tracking-widest">
-                          {"///"} {vehicle.category.toUpperCase()}
+                          {vehicle.category.toUpperCase()}
                         </span>
                         <h3 className="font-display text-xl md:text-2xl font-bold text-secondary-accent uppercase">
                           {vehicle.name}
@@ -336,7 +336,7 @@ export default function Domains() {
                           >
                             <span className="text-secondary-accent/45 uppercase tracking-wide">{spec.label}</span>
                             <span className="text-secondary-accent font-bold text-right ml-4">
-                              <DecryptText text={spec.value} />
+                              {spec.value}
                             </span>
                           </div>
                         ))}

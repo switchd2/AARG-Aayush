@@ -3,7 +3,7 @@
 import React from "react";
 import { sponsorsData } from "@/content/sponsors";
 import ScrollReveal from "@/components/ScrollReveal";
-import DecryptText from "@/components/DecryptText";
+
 import { Download, Landmark, ArrowUpRight } from "lucide-react";
 
 export default function Sponsors() {
@@ -16,7 +16,7 @@ export default function Sponsors() {
         <div className="border-b border-secondary-accent/15 pb-6">
           <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-primary-accent" />
-            <DecryptText text="/// CORPORATE_SUPPORT // SPONSORSHIP" />
+            CORPORATE_SUPPORT // SPONSORSHIP
           </span>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
             Our Sponsors &amp; Affiliates
@@ -92,7 +92,7 @@ export default function Sponsors() {
           <ScrollReveal>
             <div className="flex flex-col gap-4">
               <span className="font-mono text-[9px] text-primary-accent font-bold uppercase tracking-widest">
-                {"/// TIER_01 — TITLE PARTNER"}
+                {"TIER_01 — TITLE PARTNER"}
               </span>
               <div className="flex flex-col gap-4">
                 {sponsorsData.tiers.title.map((sponsor) => (
@@ -119,7 +119,7 @@ export default function Sponsors() {
           <ScrollReveal>
             <div className="flex flex-col gap-4">
               <span className="font-mono text-[9px] text-secondary-accent/60 font-bold uppercase tracking-widest">
-                {"/// TIER_02 — PLATINUM SUPPORT"}
+                {"TIER_02 — PLATINUM SUPPORT"}
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {sponsorsData.tiers.platinum.map((sponsor) => (
@@ -146,7 +146,7 @@ export default function Sponsors() {
           <ScrollReveal>
             <div className="flex flex-col gap-4">
               <span className="font-mono text-[9px] text-secondary-accent/45 font-bold uppercase tracking-widest">
-                {"/// TIER_03 — GOLD SUPPORT"}
+                {"TIER_03 — GOLD SUPPORT"}
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {sponsorsData.tiers.gold.map((sponsor) => (
@@ -173,7 +173,7 @@ export default function Sponsors() {
           <ScrollReveal>
             <div className="flex flex-col gap-4">
               <span className="font-mono text-[9px] text-secondary-accent/35 font-bold uppercase tracking-widest">
-                {"/// TIER_04 — ASSOCIATE SPONSORS"}
+                {"TIER_04 — ASSOCIATE SPONSORS"}
               </span>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {sponsorsData.tiers.associate.map((sponsor) => (

@@ -189,7 +189,7 @@ export default function Header() {
               <div className="flex flex-col gap-6">
                 <div className="flex items-center justify-between pb-4 border-b border-white/5">
                   <span className="font-mono text-[9px] tracking-widest text-primary-accent font-semibold">
-                    {"/// UAV_SYS_NAV"}
+                    {"UAV_SYS_NAV"}
                   </span>
                   <button
                     onClick={() => setIsOpen(false)}

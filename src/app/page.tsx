@@ -11,7 +11,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SponsorMarquee from "@/components/SponsorMarquee";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import DecryptText from "@/components/DecryptText";
+
 import HeroBackground from "@/components/HeroBackground";
 import DomainRadar from "@/components/DomainRadar";
 
@@ -61,7 +61,7 @@ export default function Home() {
             {/* Section Eyebrow with typewriter decrypt */}
             <div className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
               <span className="inline-block w-2 h-2 bg-primary-accent animate-pulse" />
-              <DecryptText text="/// AARG FLIGHT COMMAND MODULE // INITIALIZED" />
+              AARG FLIGHT COMMAND MODULE // INITIALIZED
             </div>
 
             {/* Main Taglines */}
@@ -202,8 +202,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col gap-0">
           
           <div className="mb-12">
-            <span className="font-mono text-xs text-primary-accent tracking-widest uppercase">
-              <DecryptText text="// MISSION OPERATIONAL MANIFESTO" />
+            <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
+              <span className="inline-block w-1.5 h-1.5 bg-primary-accent" />
+              MISSION_OPERATIONAL_MANIFESTO
             </span>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
               How We Define Our Strategic Purpose
@@ -280,8 +281,9 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="mb-12">
-            <span className="font-mono text-xs text-primary-accent tracking-widest uppercase">
-              <DecryptText text="// TECHNICAL DOMAINS // INTERACTIVE SYSTEMS MAP" />
+            <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
+              <span className="inline-block w-1.5 h-1.5 bg-primary-accent" />
+              TECHNICAL_DOMAINS // INTERACTIVE_SYSTEMS_MAP
             </span>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
               Explore the Engineering Divisions
@@ -301,8 +303,9 @@ export default function Home() {
           {/* Spec details grid (Left) */}
           <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col gap-6">
             <div>
-              <span className="font-mono text-xs text-primary-accent tracking-widest uppercase">
-                <DecryptText text="// FEATURED SYSTEMS INTEGRATION" />
+              <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
+                <span className="inline-block w-1.5 h-1.5 bg-primary-accent" />
+                FEATURED_SYSTEMS_INTEGRATION
               </span>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
                 {featuredVehicle.name}
@@ -324,7 +327,7 @@ export default function Home() {
                 <div key={spec.label} className="flex justify-between border-b border-secondary-accent/5 py-1 text-secondary-accent/80">
                   <span className="font-semibold">{spec.label}:</span>
                   <span className="text-primary-accent font-bold">
-                    <DecryptText text={spec.value} />
+                    {spec.value}
                   </span>
                 </div>
               ))}
@@ -357,8 +360,9 @@ export default function Home() {
       {/* SECTION 5: ALUMNI SPOTLIGHT / TESTIMONIAL */}
       <section className="py-16 md:py-24 bg-bg-base relative z-10 px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center flex flex-col gap-6">
-          <span className="font-mono text-xs text-primary-accent tracking-widest uppercase">
-            <DecryptText text="// FOUNDATION_TESTIMONIAL" />
+          <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
+            <span className="inline-block w-1.5 h-1.5 bg-primary-accent" />
+            FOUNDATION_TESTIMONIAL
           </span>
           
           <div className="relative p-6 md:p-10 border border-secondary-accent/10 bg-surface-low">
@@ -378,8 +382,9 @@ export default function Home() {
       {/* SECTION 6: SPONSOR MARQUEE */}
       <section className="bg-bg-base relative z-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center pb-8">
-          <span className="font-mono text-xs text-primary-accent tracking-widest uppercase block mb-4">
-            <DecryptText text="// TRUSTED BY INDUSTRY LEADERS" />
+          <span className="font-mono text-xs text-primary-accent tracking-widest uppercase block mb-4 flex items-center justify-center gap-2">
+            <span className="inline-block w-1.5 h-1.5 bg-primary-accent" />
+            TRUSTED_BY_INDUSTRY_LEADERS
           </span>
           <h3 className="font-display text-xl font-bold text-secondary-accent uppercase tracking-wider">
             OUR SPONSORS & CORPORATE ENABLERS

@@ -3,7 +3,7 @@
 import React from "react";
 import { achievementsData } from "@/content/achievements";
 import ScrollReveal from "@/components/ScrollReveal";
-import DecryptText from "@/components/DecryptText";
+
 import { Trophy, MapPin, Calendar } from "lucide-react";
 
 const RANK_COLOR: Record<string, string> = {
@@ -48,7 +48,7 @@ export default function MissionTimeline() {
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-mono text-[9px] text-primary-accent tracking-widest uppercase">
-                      <DecryptText text={award.competition} />
+                      {award.competition}
                     </span>
                     <h3 className="font-display text-base md:text-lg font-extrabold text-secondary-accent uppercase tracking-tight leading-tight">
                       {award.title}

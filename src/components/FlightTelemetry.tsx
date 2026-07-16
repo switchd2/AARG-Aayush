@@ -487,7 +487,7 @@ export default function FlightTelemetry() {
         {/* Precision top-edge accent */}
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary-accent/25 to-transparent pointer-events-none" />
         <div className="flex justify-between items-center border-b border-secondary-accent/10 px-4 py-2.5 text-primary-accent font-bold">
-          <span className="tracking-wider">/// TELEMETRY_FEED_01</span>
+          <span className="tracking-wider">TELEMETRY_FEED_01</span>
           <span className="flex items-center gap-1.5 text-[9px]">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary-accent opacity-50" />
             RECORDING
@@ -509,7 +509,7 @@ export default function FlightTelemetry() {
 
       {/* ── Header ──────────────────────────────── */}
       <div className="flex justify-between items-center border-b border-secondary-accent/10 px-4 py-2.5 text-primary-accent font-bold">
-        <span className="tracking-wider">/// TELEMETRY_FEED_01</span>
+        <span className="tracking-wider">TELEMETRY_FEED_01</span>
         <span className="flex items-center gap-1.5 text-[9px]">
           <motion.span
             animate={{ opacity: [1, 0.3, 1] }}

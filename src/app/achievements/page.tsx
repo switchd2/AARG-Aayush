@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { achievementsData, Award } from "@/content/achievements";
 import ScrollReveal from "@/components/ScrollReveal";
-import DecryptText from "@/components/DecryptText";
+
 import { Calendar, MapPin } from "lucide-react";
 import { motion, useScroll, useSpring, useInView, useReducedMotion } from "framer-motion";
 
@@ -150,7 +150,7 @@ export default function Achievements() {
         <div className="border-b border-secondary-accent/15 pb-6">
           <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-primary-accent" />
-            <DecryptText text="/// COMP_HISTORY_LOG // ACHIEVEMENTS" />
+            COMP_HISTORY_LOG // ACHIEVEMENTS
           </span>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
             Victories &amp; Accreditations
@@ -172,7 +172,7 @@ export default function Achievements() {
               {/* Written Narrative */}
               <div className="lg:col-span-7 flex flex-col gap-4">
                 <span className="font-mono text-xs text-primary-accent tracking-widest uppercase font-semibold">
-                  <DecryptText text="/// FEATURED FLIGHT SPOTLIGHT" />
+                  FEATURED_FLIGHT_SPOTLIGHT
                 </span>
                 <h2 className="font-display text-xl md:text-2xl font-bold text-secondary-accent uppercase leading-tight">
                   {achievementsData.spotlight.title}
@@ -204,7 +204,7 @@ export default function Achievements() {
                     <div key={metric.label} className="flex justify-between border-b border-secondary-accent/5 py-1.5 text-secondary-accent/80">
                       <span className="font-semibold uppercase">{metric.label}:</span>
                       <span className="text-primary-accent font-bold text-xs">
-                        <DecryptText text={metric.value} />
+                        {metric.value}
                       </span>
                     </div>
                   ))}

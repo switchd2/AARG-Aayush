@@ -3,7 +3,7 @@
 import React from "react";
 import { teamData } from "@/content/team";
 import ScrollReveal from "@/components/ScrollReveal";
-import DecryptText from "@/components/DecryptText";
+
 import { motion } from "framer-motion";
 
 // Custom LinkedIn SVG icon component
@@ -37,7 +37,7 @@ export default function Team() {
         <div className="border-b border-secondary-accent/15 pb-6">
           <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-primary-accent" />
-            <DecryptText text="/// UAV_CREW_MANIFEST // FLIGHT_OFFICERS" />
+            UAV_CREW_MANIFEST // FLIGHT_OFFICERS
           </span>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
             The AARG Squadron
