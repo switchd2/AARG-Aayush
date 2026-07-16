@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { motion, AnimatePresence } from "framer-motion";
 import Magnetic from "@/components/Magnetic";
-import TelemetryStrip from "@/components/TelemetryStrip";
+
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -164,10 +164,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Live flight computer telemetry bar */}
-        <div className="mt-2">
-          <TelemetryStrip />
-        </div>
+
       </header>
 
       {/* Mobile Sidebar overlay */}
