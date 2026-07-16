@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Users, Calendar, Trophy, Cpu } from "lucide-react";
-import FlightTelemetry from "@/components/FlightTelemetry";
+import HeroSchematic from "@/components/HeroSchematic";
 import { siteConfig } from "@/content/site";
 import { vehicles } from "@/content/vehicles";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -106,7 +106,7 @@ export default function Home() {
             style={shouldReduceMotion ? {} : { y: yConsole, opacity: opacityHero }}
             className="lg:col-span-5 hidden lg:block"
           >
-            <FlightTelemetry />
+            <HeroSchematic />
           </motion.div>
         </div>
       </section>
