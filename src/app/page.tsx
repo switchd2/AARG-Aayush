@@ -8,6 +8,7 @@ import HeroSchematic from "@/components/HeroSchematic";
 import { siteConfig } from "@/content/site";
 import { vehicles } from "@/content/vehicles";
 import ScrollReveal from "@/components/ScrollReveal";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 
 import HeroBackground from "@/components/HeroBackground";
@@ -314,8 +315,8 @@ export default function Home() {
           <div className="lg:col-span-7 order-1 lg:order-2">
             <div className="relative aspect-video w-full border border-secondary-accent/12 bg-bg-base overflow-hidden">
               <Image
-                src="/images/gallery_flight_1.png"
-                alt="Phoenix UAV Flying"
+                src="/images/gallery_flight_1.jpg"
+                alt="Fixed-Wing UAV Hand Launch"
                 fill
                 sizes="(max-width: 1024px) 100vw, 720px"
                 className="object-cover p-1"

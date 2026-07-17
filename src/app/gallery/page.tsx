@@ -17,18 +17,11 @@ function getCellClass(index: number): string {
 }
 
 export default function Gallery() {
-  const [filter, setFilter] = useState<"all" | "flight" | "build" | "competition">("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const filteredItems = galleryItems.filter(
-    (item) => filter === "all" || item.category === filter
-  );
-
   const openLightbox = (index: number) => {
-    const originalItem = filteredItems[index];
-    const originalIndex = galleryItems.findIndex((item) => item.id === originalItem.id);
-    setCurrentIndex(originalIndex);
+    setCurrentIndex(index);
     setLightboxOpen(true);
   };
 
@@ -60,26 +53,9 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-3 font-mono text-[11px] border-b border-secondary-accent/10 pb-4">
-          {(["all", "flight", "build", "competition"] as const).map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-4 py-2 border transition-all cursor-pointer rounded-none uppercase tracking-wider ${
-                filter === cat
-                  ? "border-primary-accent text-primary-accent bg-primary-accent/5 font-bold"
-                  : "border-secondary-accent/15 text-secondary-accent/60 hover:text-secondary-accent hover:border-secondary-accent/30"
-              }`}
-            >
-              {cat === "all" ? "ALL_ASSETS" : cat === "flight" ? "FLIGHT_TESTS" : cat === "build" ? "BUILD_SESSIONS" : "COMPETITIONS"}
-            </button>
-          ))}
-        </div>
-
         {/* Gallery — masonry grid with varied aspect ratios */}
         <div className="gallery-masonry">
-          {filteredItems.map((item, index) => {
+          {galleryItems.map((item, index) => {
             const cellClass = getCellClass(index);
             return (
               <ScrollReveal key={item.id} delay={Math.min(0.04 * index, 0.3)}>
@@ -99,7 +75,7 @@ export default function Gallery() {
                     alt={item.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                    className="object-cover p-1 transition-transform duration-500 group-hover:scale-105"
+                    className={`${item.id === "competition-3" ? "object-contain bg-black" : "object-cover"} p-1 transition-transform duration-500 group-hover:scale-105`}
                   />
 
                   {/* Hover overlay text panel */}
