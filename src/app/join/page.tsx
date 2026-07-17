@@ -2,10 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { siteConfig } from "@/content/site";
 import ScrollReveal from "@/components/ScrollReveal";
 
-import { UserPlus, ChevronDown, ChevronUp } from "lucide-react";
+import { Mail, Phone, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Join() {
@@ -101,81 +100,80 @@ export default function Join() {
             </ScrollReveal>
           </div>
 
-          {/* CTA Panel — HUD panel kept (focused action element) */}
+          {/* Contact Panel */}
           <div className="lg:col-span-5">
             <ScrollReveal delay={0.15}>
-              <div className="border border-primary-accent/30 bg-surface-low p-6 md:p-8 relative flex flex-col gap-6 text-center items-center">
+              <div className="border border-primary-accent/30 bg-surface-low p-6 md:p-8 relative flex flex-col gap-6">
                 {/* Top accent bar */}
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary-accent/40 to-transparent pointer-events-none" />
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-primary-accent" />
+                <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-primary-accent" />
+                <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-primary-accent" />
+                <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-primary-accent" />
 
-                <div className="font-mono text-xs text-primary-accent font-bold uppercase tracking-widest flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" />
-                  GATEWAY: REGISTRATION OPEN
+                <div className="font-mono text-[10px] text-primary-accent font-bold uppercase tracking-widest flex items-center gap-2">
+                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  POINT OF CONTACT
                 </div>
 
-                <p className="font-sans text-xs text-secondary-accent/70 leading-relaxed max-w-sm">
-                  Click the link below to load AARG&apos;s external Google Form application portal. Ensure you provide accurate details.
-                </p>
+                <div className="border-b border-white/5 pb-4">
+                  <p className="font-display text-base font-bold text-white uppercase tracking-wide">Aryan Basnet</p>
+                  <p className="font-mono text-[10px] text-secondary-accent/50 uppercase tracking-widest mt-0.5">AARG Representative</p>
+                </div>
 
-                <a
-                  href={siteConfig.recruitmentFormUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-xs font-bold border border-primary-accent bg-primary-accent text-white px-6 py-4 hover:bg-transparent hover:text-primary-accent transition-all duration-250 focus-hud text-center flex items-center justify-center gap-2 rounded-none w-full cursor-pointer"
-                >
-                  <UserPlus className="w-4 h-4" /> APPLY_NOW // REG_PORTAL
-                </a>
+                <div className="flex flex-col gap-4">
+                  <a
+                    href="tel:+918218397502"
+                    className="flex items-center gap-3 group"
+                  >
+                    <div className="p-2 bg-primary-accent/10 border border-primary-accent/20 group-hover:border-primary-accent/60 transition-colors">
+                      <Phone className="w-4 h-4 text-primary-accent" />
+                    </div>
+                    <div>
+                      <p className="font-mono text-[9px] text-secondary-accent/40 uppercase tracking-widest">Phone</p>
+                      <p className="font-mono text-xs text-secondary-accent group-hover:text-white transition-colors">+91 82183 97502</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:aryanbasnet2005@gmail.com"
+                    className="flex items-center gap-3 group"
+                  >
+                    <div className="p-2 bg-primary-accent/10 border border-primary-accent/20 group-hover:border-primary-accent/60 transition-colors">
+                      <Mail className="w-4 h-4 text-primary-accent" />
+                    </div>
+                    <div>
+                      <p className="font-mono text-[9px] text-secondary-accent/40 uppercase tracking-widest">Email</p>
+                      <p className="font-mono text-xs text-secondary-accent group-hover:text-white transition-colors">aryanbasnet2005@gmail.com</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/aryan-basnet-446973235/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 group"
+                  >
+                    <div className="p-2 bg-primary-accent/10 border border-primary-accent/20 group-hover:border-primary-accent/60 transition-colors">
+                      <svg className="w-4 h-4 text-primary-accent" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="font-mono text-[9px] text-secondary-accent/40 uppercase tracking-widest">LinkedIn</p>
+                      <p className="font-mono text-xs text-secondary-accent group-hover:text-white transition-colors">aryan-basnet-446973235</p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </ScrollReveal>
           </div>
         </div>
 
-        {/* SELECTION STEPS — Vertical sequential flow, not 3 cards */}
-        <div className="flex flex-col gap-8">
-          <div className="flex items-center gap-3">
-            <h2 className="font-mono text-[10px] font-bold text-secondary-accent uppercase tracking-widest">
-              {"// SELECTION STEPS & SCHEDULE"}
-            </h2>
-            <div className="flex-1 hud-divider-h" />
-          </div>
-
-          {/* Vertical step flow */}
-          <div className="flex flex-col gap-0 max-w-3xl">
-            {timelineSteps.map((step, idx) => (
-              <ScrollReveal key={step.step} delay={0.1 * idx}>
-                <div className="grid grid-cols-12 gap-6 items-start">
-                  {/* Step number + connector line */}
-                  <div className="col-span-2 flex flex-col items-center">
-                    <span className="font-mono text-2xl md:text-3xl font-semibold text-primary-accent leading-none opacity-70">
-                      {step.step}
-                    </span>
-                    {idx < timelineSteps.length - 1 && (
-                      <div className="w-[1px] flex-1 mt-3 min-h-[3rem]" style={{ background: "rgba(180,77,11,0.25)" }} />
-                    )}
-                  </div>
-
-                  {/* Step content */}
-                  <div className="col-span-10 flex flex-col gap-2 pt-1 pb-8">
-                    <div className="flex items-center gap-3 flex-wrap">
-                      <h3 className="font-display font-bold text-base md:text-lg text-secondary-accent uppercase tracking-wide">
-                        {step.title}
-                      </h3>
-                      <span className="font-mono text-[9px] text-secondary-accent/35 uppercase border border-secondary-accent/12 px-2 py-0.5 tracking-widest">
-                        {step.date}
-                      </span>
-                    </div>
-                    <p className="font-sans text-sm text-secondary-accent/70 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
 
         {/* FAQ ACCORDION */}
-        <div className="flex flex-col gap-8 max-w-3xl mx-auto w-full">
+        <div className="flex flex-col gap-8 w-full">
           <div className="flex flex-col gap-2">
             <span className="font-mono text-[10px] text-primary-accent tracking-widest uppercase font-bold">{"// RECRUITMENT_FAQ"}</span>
             <h3 className="font-display text-xl font-bold text-secondary-accent uppercase tracking-wider">
