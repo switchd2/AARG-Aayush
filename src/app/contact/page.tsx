@@ -1,65 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { siteConfig } from "@/content/site";
+import React from "react";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-
-// Inline brand SVGs for social media icons
-const Instagram = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-  </svg>
-);
-
-const Linkedin = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect x="2" y="9" width="4" height="12" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
-
-const Youtube = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-  </svg>
-);
-
-const Github = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-  </svg>
-);
+import { Mail, Phone } from "lucide-react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   return (
     <div className="relative w-full flex flex-col min-h-screen bg-bg-base py-12 md:py-20 px-4 md:px-8">
       {/* HUD Background Overlays */}
@@ -72,242 +17,118 @@ export default function Contact() {
         <div className="border-b border-secondary-accent/15 pb-6">
           <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-primary-accent" />
-            CONTACT
+            COMMS_CENTER // REACH_OUT
           </span>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-secondary-accent uppercase tracking-tight mt-2">
             Connect With AARG
           </h1>
-          <p className="text-secondary-accent/60 font-sans text-xs mt-1">
-            Have a question? Reach out to our team.
+          <p className="text-secondary-accent/60 font-mono text-[11px] mt-1 uppercase">
+            OPERATIONAL_CHANNELS // INQUIRIES & PARTNERSHIPS
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          {/* Contact Information & Coordinates */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            <ScrollReveal>
-              <div className="border border-secondary-accent/25 bg-surface/80 p-6 relative text-xs text-secondary-accent/80 flex flex-col gap-6">
-                <div className="hud-corner hud-corner-tl" />
-                <div className="hud-corner hud-corner-tr" />
-                <div className="hud-corner hud-corner-bl" />
-                <div className="hud-corner hud-corner-br" />
+        {/* Contacts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <ScrollReveal>
+            <div className="relative h-full flex flex-col justify-between border border-secondary-accent/15 bg-surface-mid/30 p-6 md:p-8 hover:border-primary-accent/40 transition-all duration-300 group">
+              {/* HUD corner lines */}
+              <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
+              <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
+              <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
+              <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
 
-                <div className="font-mono text-xs text-primary-accent font-bold border-b border-secondary-accent/15 pb-2 uppercase">
-                  Contact Information
-                </div>
-
-                <div className="flex flex-col gap-4 font-sans text-xs">
-                  
-                  {/* Address */}
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary-accent shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-sans text-xs block text-secondary-accent/50 font-semibold mb-0.5">
-                        Address
-                      </span>
-                      <span className="text-secondary-accent/90">
-                        {siteConfig.labRoom}, {siteConfig.department}, <br />
-                        {siteConfig.college}, <br />
-                        {siteConfig.city}, {siteConfig.state} - {siteConfig.pincode}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Email */}
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-primary-accent shrink-0" />
-                    <div>
-                      <span className="font-sans text-xs block text-secondary-accent/50 font-semibold mb-0.5">
-                        Email
-                      </span>
-                      <a href={`mailto:${siteConfig.email}`} className="text-secondary-accent/90 hover:text-primary-accent hover:underline font-mono">
-                        {siteConfig.email}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Phone */}
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-primary-accent shrink-0" />
-                    <div>
-                      <span className="font-sans text-xs block text-secondary-accent/50 font-semibold mb-0.5">
-                        Phone
-                      </span>
-                      <a href={`tel:${siteConfig.phone}`} className="text-secondary-accent/90 hover:text-primary-accent hover:underline font-mono">
-                        {siteConfig.phone}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Social links block */}
-                <div className="border-t border-secondary-accent/15 pt-4">
-                  <span className="font-sans text-xs block text-secondary-accent/50 font-semibold mb-3">
-                    Follow Us
+              <div>
+                <div className="flex justify-between items-center mb-6">
+                  <span className="font-mono text-[9px] text-primary-accent uppercase tracking-widest font-semibold bg-primary-accent/10 px-2 py-0.5 border border-primary-accent/25">
+                    Primary Contact
                   </span>
-                  <div className="flex items-center gap-3">
-                    <a
-                      href={siteConfig.socials.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Instagram Link"
-                      className="p-2 border border-secondary-accent/15 hover:border-primary-accent hover:text-primary-accent transition-colors focus-hud rounded-none"
-                    >
-                      <Instagram className="w-4 h-4" />
-                    </a>
-                    <a
-                      href={siteConfig.socials.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="LinkedIn Link"
-                      className="p-2 border border-secondary-accent/15 hover:border-primary-accent hover:text-primary-accent transition-colors focus-hud rounded-none"
-                    >
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                    <a
-                      href={siteConfig.socials.youtube}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="YouTube Channel Link"
-                      className="p-2 border border-secondary-accent/15 hover:border-primary-accent hover:text-primary-accent transition-colors focus-hud rounded-none"
-                    >
-                      <Youtube className="w-4 h-4" />
-                    </a>
-                    {siteConfig.socials.github && (
-                      <a
-                        href={siteConfig.socials.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub Repository Link"
-                        className="p-2 border border-secondary-accent/15 hover:border-primary-accent hover:text-primary-accent transition-colors focus-hud rounded-none"
-                      >
-                        <Github className="w-4 h-4" />
-                      </a>
-                    )}
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[9px] text-secondary-accent/40">
+                      COMMS_CH // 01
+                    </span>
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
                   </div>
                 </div>
+                
+                <h2 className="font-display text-2xl font-bold text-secondary-accent uppercase tracking-tight group-hover:text-primary-accent transition-colors duration-300">
+                  Mr. Aryan Basnet
+                </h2>
+                <div className="h-[1px] w-full bg-secondary-accent/10 my-4" />
               </div>
-            </ScrollReveal>
 
-
-          </div>
-
-          {/* Simple Contact Form */}
-          <div className="lg:col-span-7">
-            <ScrollReveal delay={0.1}>
-              <div className="border border-secondary-accent/15 bg-surface/30 p-6 md:p-8 relative">
-                <div className="hud-corner hud-corner-tl" />
-                <div className="hud-corner hud-corner-tr" />
-                <div className="hud-corner hud-corner-bl" />
-                <div className="hud-corner hud-corner-br" />
-
-                <div className="border-b border-secondary-accent/15 pb-4 mb-6">
-                  <h3 className="font-display text-lg font-bold text-secondary-accent">
-                    Send Us a Message
-                  </h3>
+              <div className="font-mono text-xs flex flex-col gap-5 text-secondary-accent/70 mt-4">
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-[9px] uppercase tracking-wider text-secondary-accent/40 font-bold">VOICE CHANNEL</span>
+                  <a href="tel:8218397502" className="hover:text-primary-accent hover:underline flex items-center gap-2.5 text-secondary-accent transition-colors">
+                    <Phone className="w-4 h-4 text-primary-accent shrink-0" />
+                    <span className="font-medium">8218397502</span>
+                  </a>
                 </div>
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5 text-xs md:text-sm">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Name */}
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="name" className="text-xs text-secondary-accent/70 font-semibold font-sans">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your name"
-                        className="bg-bg-base border border-secondary-accent/15 p-3 text-secondary-accent placeholder:text-secondary-accent/30 font-sans focus:outline-none focus:border-primary-accent rounded-none"
-                      />
-                    </div>
-
-                    {/* Email */}
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="email" className="text-xs text-secondary-accent/70 font-semibold font-sans">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="you@example.com"
-                        className="bg-bg-base border border-secondary-accent/15 p-3 text-secondary-accent placeholder:text-secondary-accent/30 font-sans focus:outline-none focus:border-primary-accent rounded-none"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Subject */}
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="subject" className="text-xs text-secondary-accent/70 font-semibold font-sans">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What's this about?"
-                      className="bg-bg-base border border-secondary-accent/15 p-3 text-secondary-accent placeholder:text-secondary-accent/30 font-sans focus:outline-none focus:border-primary-accent rounded-none"
-                    />
-                  </div>
-
-                  {/* Message */}
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="text-xs text-secondary-accent/70 font-semibold font-sans">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      required
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Write your message..."
-                      className="bg-bg-base border border-secondary-accent/15 p-3 text-secondary-accent placeholder:text-secondary-accent/30 font-sans focus:outline-none focus:border-primary-accent rounded-none resize-none"
-                    />
-                  </div>
-
-                  {/* Status Indicator / Submit */}
-                  <div className="flex items-center justify-between mt-2 font-sans text-xs">
-                    <div>
-                      {status === "sending" && (
-                        <span className="text-primary-accent font-bold animate-pulse">
-                          Sending...
-                        </span>
-                      )}
-                      {status === "success" && (
-                        <span className="text-green-500 font-bold">
-                          Message sent successfully.
-                        </span>
-                      )}
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={status === "sending"}
-                      className="font-sans text-xs font-bold border border-primary-accent bg-primary-accent text-white px-6 py-3.5 hover:bg-transparent hover:text-primary-accent transition-all duration-250 focus-hud rounded-none flex items-center gap-2 cursor-pointer disabled:opacity-50"
-                    >
-                      <Send className="w-3.5 h-3.5" /> Send Message
-                    </button>
-                  </div>
-                </form>
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-[9px] uppercase tracking-wider text-secondary-accent/40 font-bold">EMAIL LINK</span>
+                  <a href="mailto:aryanbasnet2005@gmail.com" className="hover:text-primary-accent hover:underline flex items-center gap-2.5 text-secondary-accent transition-colors">
+                    <Mail className="w-4 h-4 text-primary-accent shrink-0" />
+                    <span className="font-medium truncate">aryanbasnet2005@gmail.com</span>
+                  </a>
+                </div>
               </div>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={0.1}>
+            <div className="relative h-full flex flex-col justify-between border border-secondary-accent/15 bg-surface-mid/30 p-6 md:p-8 hover:border-primary-accent/40 transition-all duration-300 group">
+              {/* HUD corner lines */}
+              <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
+              <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
+              <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b border-l border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
+              <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b border-r border-secondary-accent/30 group-hover:border-primary-accent/60 transition-colors" />
+
+              <div>
+                <div className="flex justify-between items-center mb-6">
+                  <span className="font-mono text-[9px] text-primary-accent uppercase tracking-widest font-semibold bg-primary-accent/10 px-2 py-0.5 border border-primary-accent/25">
+                    Secondary Contact
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[9px] text-secondary-accent/40">
+                      COMMS_CH // 02
+                    </span>
+                    <span className="relative flex h-2 w-2">
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500/50"></span>
+                    </span>
+                  </div>
+                </div>
+                
+                <h2 className="font-display text-2xl font-bold text-secondary-accent uppercase tracking-tight group-hover:text-primary-accent transition-colors duration-300">
+                  Mr. Rahul Jadhav
+                </h2>
+                <div className="h-[1px] w-full bg-secondary-accent/10 my-4" />
+              </div>
+
+              <div className="font-mono text-xs flex flex-col gap-5 text-secondary-accent/70 mt-4">
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-[9px] uppercase tracking-wider text-secondary-accent/40 font-bold">VOICE CHANNEL</span>
+                  <div className="flex items-center gap-2.5 text-secondary-accent/30 select-none">
+                    <Phone className="w-4 h-4 text-secondary-accent/20 shrink-0" />
+                    <span className="font-medium italic">UNLISTED / EMAIL ONLY</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-[9px] uppercase tracking-wider text-secondary-accent/40 font-bold">EMAIL LINK</span>
+                  <a href="mailto:rahul.jadhav@aissmsioit.org" className="hover:text-primary-accent hover:underline flex items-center gap-2.5 text-secondary-accent transition-colors">
+                    <Mail className="w-4 h-4 text-primary-accent shrink-0" />
+                    <span className="font-medium truncate">rahul.jadhav@aissmsioit.org</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
+
       </div>
     </div>
   );

@@ -38,8 +38,8 @@ export const siteConfig: SiteConfig = {
   city: "[CITY]",
   state: "[STATE]",
   pincode: "[PINCODE]",
-  email: "[CONTACT EMAIL]",
-  phone: "[CONTACT PHONE]",
+  email: "aryanbasnet2005@gmail.com",
+  phone: "8218397502",
   recruitmentFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfRecruitmentMock/viewform",
   sponsorshipDeckUrl: "#", // Direct download or internal static file path
   socials: {
