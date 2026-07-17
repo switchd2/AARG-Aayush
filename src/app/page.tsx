@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
-import { vehicles } from "@/content/vehicles";
 import ScrollReveal from "@/components/ScrollReveal";
 
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
@@ -14,7 +13,6 @@ import HeroBackground from "@/components/HeroBackground";
 
 
 export default function Home() {
-  const featuredVehicle = vehicles[0];
   const shouldReduceMotion = useReducedMotion();
 
   // Scroll tracking for Hero section parallax
@@ -189,60 +187,6 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* SECTION 4: FEATURED UAV PROJECT TEASER */}
-      <section className="py-16 md:py-24 bg-surface border-y border-secondary-accent/15 relative z-10 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Spec details grid (Left) */}
-          <div className="lg:col-span-5 order-2 lg:order-1 flex flex-col gap-6">
-            <div>
-              <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
-                <span className="inline-block w-1.5 h-1.5 bg-primary-accent" />
-                FEATURED_SYSTEMS_INTEGRATION
-              </span>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
-                {featuredVehicle.name}
-              </h2>
-              <p className="text-secondary-accent/80 font-sans text-sm leading-relaxed mt-3">
-                {featuredVehicle.description}
-              </p>
-            </div>
-
-            <div className="border border-secondary-accent/12 bg-surface-low p-5 font-mono text-[11px] relative flex flex-col gap-2">
-              {/* Top accent */}
-              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-secondary-accent/20 to-transparent pointer-events-none" />
-              
-              <div className="text-primary-accent font-bold border-b border-secondary-accent/10 pb-1 uppercase">
-                {"// SYSTEM SPEC SHEET"}
-              </div>
-
-              {featuredVehicle.specs.slice(0, 5).map((spec) => (
-                <div key={spec.label} className="flex justify-between border-b border-secondary-accent/5 py-1 text-secondary-accent/80">
-                  <span className="font-semibold">{spec.label}:</span>
-                  <span className="text-primary-accent font-bold">
-                    {spec.value}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Photo frame (Right) */}
-          <div className="lg:col-span-7 order-1 lg:order-2">
-            <div className="relative aspect-video w-full border border-secondary-accent/12 bg-bg-base overflow-hidden">
-              <Image
-                src="/images/gallery_flight_1.jpg"
-                alt="Fixed-Wing UAV Hand Launch"
-                fill
-                sizes="(max-width: 1024px) 100vw, 720px"
-                className="object-cover p-1"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
 
     </div>
