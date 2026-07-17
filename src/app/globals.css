@@ -212,6 +212,47 @@ body {
   letter-spacing: 0.05em;
   color: rgba(209, 202, 191, 0.5);
 }
+
+.scroll-dot {
+  position: absolute;
+  border-radius: 9999px;
+  background: #ffffff;
+  filter: none;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.18);
+  animation-name: float-dot;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes float-dot {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    transform: translate3d(calc(var(--dx) * 0.15), calc(var(--dy) * 0.15), 0) scale(0.98);
+    opacity: 0.65;
+  }
+  25% {
+    transform: translate3d(calc(var(--dx) * 0.4), calc(var(--dy) * 0.4), 0) scale(1.03);
+    opacity: 0.98;
+  }
+  55% {
+    transform: translate3d(calc(var(--dx) * 0.65), calc(var(--dy) * 0.65), 0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate3d(calc(var(--dx) * 0.8), calc(var(--dy) * 0.8), 0) scale(0.97);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(var(--dx), var(--dy), 0) scale(1);
+    opacity: 0;
+  }
+}
 .domain-rail-item:hover {
   color: rgba(209, 202, 191, 0.8);
   border-left-color: rgba(255, 255, 255, 0.2);

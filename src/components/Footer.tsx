@@ -112,19 +112,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 border-t border-secondary-accent/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between text-secondary-accent/50 gap-4">
-        <div>
-          © {new Date().getFullYear()} {siteConfig.name}. Student Engineering Team.
-        </div>
-        <div className="flex gap-4">
-          <span className="hover:text-primary-accent cursor-pointer transition-colors duration-200">
-            {"FLIGHT_AUTH // 256B"}
-          </span>
-          <span>|</span>
-          <span className="hover:text-primary-accent cursor-pointer transition-colors duration-200">
-            {"FAA_COMPLIANT // MOCK"}
-          </span>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 border-t border-secondary-accent/10 mt-12 pt-6 text-secondary-accent/50">
+        © {new Date().getFullYear()} {siteConfig.name}. Student Engineering Team.
       </div>
     </footer>
   );

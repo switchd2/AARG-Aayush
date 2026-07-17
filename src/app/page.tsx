@@ -15,6 +15,27 @@ import HeroBackground from "@/components/HeroBackground";
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
 
+  const scrollDots = Array.from({ length: 560 }, (_, index) => {
+    const seeded = index * 83 + 19;
+    const rand = (n: number) => Math.abs(Math.sin(n) * 10000 % 1);
+    const x = 1 + Math.floor(rand(seeded) * 97);
+    const y = 2 + Math.floor(rand(seeded + 23) * 94);
+    const size = 0.8 + rand(seeded + 7) * 1.0;
+    const dx = Math.floor(rand(seeded + 17) * 18) - 9;
+    const dy = Math.floor(rand(seeded + 29) * 18) - 9;
+    const delay = `${-(rand(seeded + 11) * 9.5).toFixed(2)}s`;
+    const duration = `${2.4 + rand(seeded + 13) * 2.8}s`;
+    return {
+      left: `${Math.min(x, 98)}%`,
+      top: `${Math.min(y, 96)}%`,
+      size,
+      dx,
+      dy,
+      delay,
+      duration,
+    };
+  });
+
   // Scroll tracking for Hero section parallax
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
@@ -103,13 +124,27 @@ export default function Home() {
 
       {/* SECTION 3: NARRATIVE ARC — Editorial numbered rows, no cards */}
       <section className="py-16 md:py-28 bg-surface relative z-10 px-4 md:px-8 border-b border-secondary-accent/10">
-        <div className="max-w-7xl mx-auto flex flex-col gap-0">
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+          {scrollDots.map((dot, index) => (
+            <span
+              key={index}
+              className="scroll-dot"
+              style={{
+                left: dot.left,
+                top: dot.top,
+                width: `${dot.size}px`,
+                height: `${dot.size}px`,
+                animationDelay: dot.delay,
+                animationDuration: dot.duration,
+                ["--dx" as any]: `${dot.dx}px`,
+                ["--dy" as any]: `${dot.dy}px`,
+              } as React.CSSProperties}
+            />
+          ))}
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-0">
           
           <div className="mb-12">
-            <span className="font-mono text-xs text-primary-accent tracking-widest uppercase flex items-center gap-2">
-              <span className="inline-block w-1.5 h-1.5 bg-primary-accent" />
-              MISSION_OPERATIONAL_MANIFESTO
-            </span>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
               How We Define Our Strategic Purpose
             </h2>
