@@ -275,6 +275,18 @@ export default function Team() {
                             {member.role}
                           </span>
                         </div>
+                        {/* LinkedIn icon */}
+                        {member.linkedinUrl && (
+                          <a
+                            href={member.linkedinUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${member.name} LinkedIn`}
+                            className="text-secondary-accent/40 hover:text-primary-accent transition-colors focus-hud shrink-0"
+                          >
+                            <Linkedin className="w-3.5 h-3.5" />
+                          </a>
+                        )}
                       </motion.div>
                     ))}
                   </div>
