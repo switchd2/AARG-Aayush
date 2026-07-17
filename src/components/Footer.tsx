@@ -38,8 +38,8 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Team", href: "/team" },
+    { name: "Projects", href: "/projects" },
     { name: "Achievements", href: "/achievements" },
-    { name: "Sponsors", href: "/sponsors" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];
