@@ -10,6 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 
 import HeroBackground from "@/components/HeroBackground";
+import AnimatedCounter from "@/components/AnimatedCounter";
 
 
 export default function Home() {
