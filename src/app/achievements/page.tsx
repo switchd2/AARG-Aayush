@@ -20,7 +20,7 @@ function TimelineNode({ award, index }: { award: Award; index: number }) {
   if (shouldReduceMotion) {
     return (
       <div className="relative flex flex-col gap-3 pl-4 border-l border-secondary-accent/15 py-5">
-        <div className="absolute left-[-5px] top-7 w-2.5 h-2.5 rounded-full bg-primary-accent" />
+        <div className="absolute left-[-5px] top-2.5 w-2.5 h-2.5 rounded-full bg-primary-accent" />
         <div className="pl-6 md:pl-8 flex flex-col gap-3">
           {/* Year + Rank header row */}
           <div className="flex items-center gap-4 flex-wrap">
@@ -56,7 +56,7 @@ function TimelineNode({ award, index }: { award: Award; index: number }) {
   return (
     <div ref={nodeRef} className="relative flex flex-col gap-3 items-start pb-10">
       {/* Timeline Node Marker */}
-      <div className="absolute left-[-26px] md:left-[-38px] top-7 z-10 flex items-center justify-center">
+      <div className="absolute left-[-26px] md:left-[-38px] top-2.5 z-10 flex items-center justify-center">
         {/* Outer pulse ring */}
         <motion.div
           animate={isInView ? { scale: [1, 1.9, 1], opacity: [0.08, 0.5, 0.08] } : { scale: 1, opacity: 0.08 }}
@@ -160,59 +160,7 @@ export default function Achievements() {
           </p>
         </div>
 
-        {/* FLAGSHIP CAMPAIGN SPOTLIGHT — kept as full-width editorial panel */}
-        <ScrollReveal>
-          <div className="border border-primary-accent/35 bg-surface/30 p-6 md:p-10 relative flex flex-col gap-8">
-            <div className="hud-corner hud-corner-tl !border-primary-accent" />
-            <div className="hud-corner hud-corner-tr !border-primary-accent" />
-            <div className="hud-corner hud-corner-bl !border-primary-accent" />
-            <div className="hud-corner hud-corner-br !border-primary-accent" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Written Narrative */}
-              <div className="lg:col-span-7 flex flex-col gap-4">
-                <span className="font-mono text-xs text-primary-accent tracking-widest uppercase font-semibold">
-                  FEATURED_FLIGHT_SPOTLIGHT
-                </span>
-                <h2 className="font-display text-xl md:text-2xl font-bold text-secondary-accent uppercase leading-tight">
-                  {achievementsData.spotlight.title}
-                </h2>
-                <h3 className="font-mono text-xs text-secondary-accent/55 uppercase">
-                  {achievementsData.spotlight.subtitle}
-                </h3>
-                
-                <div className="font-sans text-sm md:text-base text-secondary-accent/80 space-y-3 leading-relaxed mt-2">
-                  {achievementsData.spotlight.narrative.map((para, i) => (
-                    <p key={i}>{para}</p>
-                  ))}
-                </div>
-              </div>
-
-              {/* Spotlight telemetry metrics */}
-              <div className="lg:col-span-5 flex flex-col gap-4">
-                <div className="border border-secondary-accent/15 bg-bg-base/80 p-5 font-mono text-[10px] relative flex flex-col gap-2">
-                  <div className="hud-corner hud-corner-tl" />
-                  <div className="hud-corner hud-corner-tr" />
-                  <div className="hud-corner hud-corner-bl" />
-                  <div className="hud-corner hud-corner-br" />
-
-                  <div className="text-primary-accent font-bold border-b border-secondary-accent/15 pb-1 uppercase text-[10px]">
-                    {"// MISSION_FLIGHT_LOGS"}
-                  </div>
-
-                  {achievementsData.spotlight.metrics.map((metric) => (
-                    <div key={metric.label} className="flex justify-between border-b border-secondary-accent/5 py-1.5 text-secondary-accent/80">
-                      <span className="font-semibold uppercase">{metric.label}:</span>
-                      <span className="text-primary-accent font-bold text-xs">
-                        {metric.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
 
         {/* AWARDS REGISTRY TIMELINE TRACK */}
         <div className="flex flex-col gap-8">
