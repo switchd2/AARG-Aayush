@@ -56,19 +56,19 @@ export default function Home() {
         ref={heroRef}
         className="relative min-h-[90vh] flex items-center border-b border-secondary-accent/15 hud-grid hud-scanlines py-20 px-4 md:px-8 overflow-hidden"
       >
-        {/* Full-bleed background image */}
+        {/* Full-bleed hero background image */}
         <Image
-          src="/images/hero_drone.jpg"
-          alt="AARG Fixed-Wing UAV in Flight"
+          src="/images/hero%20image.png"
+          alt="AARG hero image"
           fill
           sizes="100vw"
           quality={100}
-          className="object-cover object-center z-0 brightness-90"
+          className="object-cover object-center z-0 brightness-75"
           priority
         />
 
-        {/* Subtle darkening overlay for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-bg-base/10 via-bg-base/20 to-bg-base/10 z-[1]" />
+        {/* Darkening overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-bg-base/20 via-bg-base/30 to-bg-base/20 z-[1]" />
 
         {/* Bottom vignette */}
         <div className="absolute inset-0 bg-gradient-to-t from-bg-base/50 via-transparent to-bg-base/20 z-[1]" />
@@ -108,7 +108,7 @@ export default function Home() {
                 href="/join"
                 className="font-mono text-xs font-bold border border-primary-accent bg-primary-accent text-white px-6 py-3.5 hover:bg-transparent hover:text-primary-accent transition-all duration-250 focus-hud rounded-none flex items-center gap-2"
               >
-                JOIN_SQUADRON // REC_2026 <ChevronRight className="w-4 h-4" />
+                JOIN SQUADRON <ChevronRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/about"
