@@ -67,7 +67,7 @@ export const teamData: TeamData = {
       { name: "Vishwank Ramji", role: "Member", subteam: "Members", linkedinUrl: "https://www.linkedin.com/in/vishwank-ramji-6031a0359/" },
       { name: "Harshvardhan Karkera", role: "Member", subteam: "Members", linkedinUrl: "https://www.linkedin.com/in/harshvardhan-karkera-70479b386/", photoUrl: "/images/team/harsh.png" },
       { name: "Sarthak Chikte", role: "Member", subteam: "Members", linkedinUrl: "https://www.linkedin.com/in/sarthak-chikte-ba8780291/", photoUrl: "/images/team/sarthak.png" },
-      { name: "Sharal Vishvakarma", role: "Member", subteam: "Members", linkedinUrl: "https://www.linkedin.com/in/sharal-vishvkarma-b194792bb/" },
+      { name: "Sharal Vishvakarma", role: "Member", subteam: "Members", linkedinUrl: "https://www.linkedin.com/in/sharal-vishvkarma-b194792bb/", photoUrl: "/images/team/sharal.png" },
       { name: "Shravani Chidrawar", role: "Member", subteam: "Members", photoUrl: "/images/team/shravani.png" },
       { name: "Aaron Mobby", role: "Member", subteam: "Members", linkedinUrl: "https://www.linkedin.com/in/aaron-mobby-5819a0289/", photoUrl: "/images/team/aaron%20mobby.png" },
       { name: "Nandini Gheware", role: "Member", subteam: "Members", linkedinUrl: "https://www.linkedin.com/in/nandini-gheware-287400386/", photoUrl: "/images/team/nandini%20gheware.png" },
