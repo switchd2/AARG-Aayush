@@ -36,6 +36,7 @@ export const teamData: TeamData = {
       role: "Team Captain / President",
       subteam: "Leadership",
       linkedinUrl: "https://www.linkedin.com/in/aryan-basnet-446973235/",
+      photoUrl: "/images/team/Aryan-basnet.jpg",
     },
     {
       name: "[SYSTEMS ENGINEER NAME]",
@@ -50,6 +51,7 @@ export const teamData: TeamData = {
       role: "Faculty Advisor",
       subteam: "Faculty Advisor",
       linkedinUrl: "https://www.linkedin.com/in/rahul-jadhav-9571641b3/",
+      photoUrl: "/images/team/Rahul-Jadhav.jpg",
     }
   ],
   leads: [
@@ -86,22 +88,22 @@ export const teamData: TeamData = {
   ],
   members: {
     "Aerodynamics & Design": [
-      { name: "Siddhesh Kavitkar", role: "Aerodynamicist", subteam: "Aerodynamics & Design", linkedinUrl: "https://www.linkedin.com/in/siddhesh-kavitkar-1a3469339/" },
+      { name: "Siddhesh Kavitkar", role: "Aerodynamicist", subteam: "Aerodynamics & Design", linkedinUrl: "https://www.linkedin.com/in/siddhesh-kavitkar-1a3469339/", photoUrl: "/images/team/Siddhesh-Kavitkar.jpg" },
       { name: "Hitesh Patil", role: "CAD Modeler", subteam: "Aerodynamics & Design", linkedinUrl: "https://www.linkedin.com/in/hitesh-patil07/" },
       { name: "Pushkar Lokhande", role: "CFD Analyst", subteam: "Aerodynamics & Design", linkedinUrl: "https://www.linkedin.com/in/pushkar-lokhande-246b11311/" }
     ],
     "Structures & Fabrication": [
       { name: "Shreyas Kharade", role: "Structural Engineer", subteam: "Structures & Fabrication" },
-      { name: "Somshekhar Hunasimarad", role: "Composite Specialist", subteam: "Structures & Fabrication", linkedinUrl: "https://www.linkedin.com/in/somshekhar-hunasimarad/" },
+      { name: "Somshekhar Hunasimarad", role: "Composite Specialist", subteam: "Structures & Fabrication", linkedinUrl: "https://www.linkedin.com/in/somshekhar-hunasimarad/", photoUrl: "/images/team/Somshekhar-Hunasimarad.jpg" },
       { name: "Vishwank Ramji", role: "Fabrication Technician", subteam: "Structures & Fabrication", linkedinUrl: "https://www.linkedin.com/in/vishwank-ramji-6031a0359/" }
     ],
     "Avionics & Controls": [
       { name: "HArshvardhan Karkera", role: "Hardware-in-the-Loop Developer", subteam: "Avionics & Controls", linkedinUrl: "https://www.linkedin.com/in/harshvardhan-karkera-70479b386/" },
-      { name: "Sarthak Chikte", role: "Control Laws Engineer", subteam: "Avionics & Controls", linkedinUrl: "https://www.linkedin.com/in/sarthak-chikte-ba8780291/" },
+      { name: "Sarthak Chikte", role: "Control Laws Engineer", subteam: "Avionics & Controls", linkedinUrl: "https://www.linkedin.com/in/sarthak-chikte-ba8780291/", photoUrl: "/images/team/Sarthak-Chikte.jpg" },
       { name: "Sharal Vishvakarma", role: "Embedded Systems Specialist", subteam: "Avionics & Controls", linkedinUrl: "https://www.linkedin.com/in/sharal-vishvkarma-b194792bb/" }
     ],
     "Manufacturing & Propulsion": [
-      { name: "Aaron Mobby", role: "Propulsion Specialist", subteam: "Manufacturing & Propulsion", linkedinUrl: "https://www.linkedin.com/in/aaron-mobby-5819a0289/" },
+      { name: "Aaron Mobby", role: "Propulsion Specialist", subteam: "Manufacturing & Propulsion", linkedinUrl: "https://www.linkedin.com/in/aaron-mobby-5819a0289/", photoUrl: "/images/team/Aaron-Mobby.jpg" },
       { name: "Nandini Gheware", role: "CNC Machinist", subteam: "Manufacturing & Propulsion", linkedinUrl: "https://www.linkedin.com/in/nandini-gheware-287400386/" },
       { name: "[MEMBER NAME 12]", role: "Quality Engineer", subteam: "Manufacturing & Propulsion" }
     ],

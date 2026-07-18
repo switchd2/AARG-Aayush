@@ -260,11 +260,16 @@ export default function Team() {
                         transition={{ delay: 0.04 * mIdx, duration: 0.35 }}
                         className="roster-row"
                       >
-                        {/* Initials badge */}
-                        <div className="w-7 h-7 rounded-full border border-secondary-accent/15 flex items-center justify-center bg-surface/60 shrink-0">
-                          <span className="font-mono text-[9px] font-bold text-secondary-accent/55">
-                            {getInitials(member.name)}
-                          </span>
+                        {/* Initials badge or Photo */}
+                        <div className="w-7 h-7 rounded-full border border-secondary-accent/15 flex items-center justify-center bg-surface/60 shrink-0 overflow-hidden">
+                          {member.photoUrl ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={member.photoUrl} alt={member.name} className="object-cover w-full h-full" />
+                          ) : (
+                            <span className="font-mono text-[9px] font-bold text-secondary-accent/55">
+                              {getInitials(member.name)}
+                            </span>
+                          )}
                         </div>
                         {/* Name + Role */}
                         <div className="flex flex-col gap-0 min-w-0 flex-1">
