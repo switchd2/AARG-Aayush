@@ -56,19 +56,19 @@ export default function Home() {
         ref={heroRef}
         className="relative min-h-[90vh] flex items-center border-b border-secondary-accent/15 hud-grid hud-scanlines py-20 px-4 md:px-8 overflow-hidden"
       >
-        {/* Full-bleed background image */}
+        {/* Full-bleed hero background image */}
         <Image
-          src="/images/hero_drone.jpg"
-          alt="AARG Fixed-Wing UAV in Flight"
+          src="/images/drone_hero.jpg"
+          alt="AARG drone hero"
           fill
           sizes="100vw"
           quality={100}
-          className="object-cover object-center z-0 brightness-90"
+          className="object-cover object-center z-0 brightness-75"
           priority
         />
 
-        {/* Subtle darkening overlay for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-bg-base/10 via-bg-base/20 to-bg-base/10 z-[1]" />
+        {/* Darkening overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-r from-bg-base/20 via-bg-base/30 to-bg-base/20 z-[1]" />
 
         {/* Bottom vignette */}
         <div className="absolute inset-0 bg-gradient-to-t from-bg-base/50 via-transparent to-bg-base/20 z-[1]" />
@@ -103,18 +103,18 @@ export default function Home() {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mt-2">
+            <div className="flex flex-wrap gap-4 mt-6">
               <Link
                 href="/join"
-                className="font-mono text-xs font-bold border border-primary-accent bg-primary-accent text-white px-6 py-3.5 hover:bg-transparent hover:text-primary-accent transition-all duration-250 focus-hud rounded-none flex items-center gap-2"
+                className="font-sans text-sm font-semibold border border-primary-accent bg-primary-accent text-white px-7 py-3 hover:bg-primary-accent/95 transition-all duration-250 focus-hud rounded-md inline-flex items-center gap-2 shadow-sm hover:shadow-[0_10px_30px_rgba(200,90,23,0.18)]"
               >
-                JOIN_SQUADRON // REC_2026 <ChevronRight className="w-4 h-4" />
+                Join the Team <ChevronRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/about"
-                className="font-mono text-xs font-bold border border-secondary-accent/30 text-secondary-accent bg-transparent px-6 py-3.5 hover:border-primary-accent hover:text-primary-accent transition-all duration-250 focus-hud rounded-none"
+                className="font-sans text-sm font-medium border border-secondary-accent/30 text-secondary-accent bg-transparent px-7 py-3 hover:border-primary-accent hover:text-primary-accent transition-all duration-250 focus-hud rounded-md"
               >
-                ABOUT_US // BRIEFING
+                Learn More
               </Link>
             </div>
           </motion.div>
@@ -147,7 +147,7 @@ export default function Home() {
           
           <div className="mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
-              How We Define Our Strategic Purpose
+              THE GROUP'S PURPOSE
             </h2>
           </div>
 
@@ -205,7 +205,7 @@ export default function Home() {
               <div className="col-span-12 md:col-span-9 flex flex-col gap-3">
                 <h3 className="font-display text-lg md:text-xl font-bold text-secondary-accent uppercase tracking-tight">Our Goal</h3>
                 <p className="text-secondary-accent/75 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
-                  Our goal is to create a strong community of innovators who are eager to explore the future of aerial robotics and autonomous systems. By providing opportunities to learn beyond the classroom, collaborate across disciplines, and work on meaningful engineering projects, AARG aims to prepare students for careers in aerospace, robotics, and advanced technology while contributing to a growing culture of innovation at AISSMS IoIT.
+                  AARG's mission is to build a strong community of innovators who thrive on competition. By designing, building, and flying UAVs for national and international challenges — from SAE Aero Design to NIDAR and ISRO's IROC-U — the team turns classroom learning into competitive, hands-on engineering. Students collaborate across disciplines, tackle meaningful technical problems under competition constraints, and graduate ready for careers in aerospace, robotics, and advanced technology, while strengthening AISSMS IoIT's growing culture of innovation and competitive achievement.
                 </p>
               </div>
             </div>
