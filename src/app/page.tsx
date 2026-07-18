@@ -147,7 +147,7 @@ export default function Home() {
           
           <div className="mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
-              How We Define Our Strategic Purpose
+              THE GROUP'S PURPOSE
             </h2>
           </div>
 

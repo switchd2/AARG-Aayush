@@ -65,7 +65,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "flight-4",
-    title: "Pre-Flight Diagnostics",
+    title: "post flight",
     category: "flight",
     description: "Performing pre-flight inspection and manual compass calibration before an outdoor trial.",
     imageUrl: "/images/gallery_flight_4.jpg",
@@ -79,9 +79,9 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "competition-3",
-    title: "Team Aero Guardians Brand",
+    title: "NIDAR 2025 Team Shield",
     category: "competition",
-    description: "Official team crest and collaborating sponsors of Team Aero Guardians.",
+    description: "NIDAR 2025 team shield and collaborating sponsors of Team Aero Guardians.",
     imageUrl: "/images/gallery_competition_3.jpg",
   },
   {
