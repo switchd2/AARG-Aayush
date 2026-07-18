@@ -103,18 +103,18 @@ export default function Home() {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mt-2">
+            <div className="flex flex-wrap gap-4 mt-6">
               <Link
                 href="/join"
-                className="font-mono text-xs font-bold border border-primary-accent bg-primary-accent text-white px-6 py-3.5 hover:bg-transparent hover:text-primary-accent transition-all duration-250 focus-hud rounded-none flex items-center gap-2"
+                className="font-sans text-sm font-semibold border border-primary-accent bg-primary-accent text-white px-7 py-3 hover:bg-primary-accent/95 transition-all duration-250 focus-hud rounded-md inline-flex items-center gap-2 shadow-sm hover:shadow-[0_10px_30px_rgba(200,90,23,0.18)]"
               >
-                JOIN SQUADRON <ChevronRight className="w-4 h-4" />
+                Join the Team <ChevronRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/about"
-                className="font-mono text-xs font-bold border border-secondary-accent/30 text-secondary-accent bg-transparent px-6 py-3.5 hover:border-primary-accent hover:text-primary-accent transition-all duration-250 focus-hud rounded-none"
+                className="font-sans text-sm font-medium border border-secondary-accent/30 text-secondary-accent bg-transparent px-7 py-3 hover:border-primary-accent hover:text-primary-accent transition-all duration-250 focus-hud rounded-md"
               >
-                ABOUT_US // BRIEFING
+                Learn More
               </Link>
             </div>
           </motion.div>

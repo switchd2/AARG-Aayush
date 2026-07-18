@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { motion, AnimatePresence } from "framer-motion";
 import Magnetic from "@/components/Magnetic";
@@ -56,105 +56,111 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
-            ? "bg-transparent backdrop-blur-xl py-2 border-b border-white/5 shadow-[0_1px_20px_rgba(0,0,0,0.3)]"
-            : "bg-transparent py-4 border-b border-transparent"
+            ? "bg-surface-mid/95 backdrop-blur-xl py-3 border-b border-white/10 shadow-[0_2px_18px_rgba(0,0,0,0.35)]"
+            : "bg-surface-mid/95 py-3 border-b border-white/10"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-          {/* Brand Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-3 group focus-hud"
-          >
-            {/* Logo Container */}
-            <div className="relative w-10 h-10 flex-shrink-0 bg-black/40 border border-white/10 rounded-full overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:border-primary-accent/50">
-              {!logoError ? (
-                <img
-                  src="/logo.png"
-                  alt="AARG Logo"
-                  className="w-full h-full object-cover"
-                  onError={() => setLogoError(true)}
-                />
-              ) : (
-                <svg
-                  viewBox="0 0 100 100"
-                  className="w-full h-full text-primary-accent"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
-                  <path
-                    d="M50 20C50 20 44 38 44 55C44 62 48 66 50 66C52 66 56 62 56 55C56 38 50 20 50 20Z"
-                    fill="currentColor"
-                    opacity="0.85"
-                  />
-                  <path
-                    d="M44 48C40 50 35 55 35 60C35 63 39 63 43 61L44 58"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M56 48C60 50 65 55 65 60C65 63 61 63 57 61L56 58"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              )}
-            </div>
-
-            {/* Text Container */}
-            <div className="flex flex-col justify-center">
-              <span className="font-sans font-extrabold text-base md:text-lg leading-none text-white tracking-wider transition-colors duration-250 group-hover:text-primary-accent">
-                AARG
-              </span>
-              <span className="font-mono text-[7px] md:text-[8px] tracking-[0.15em] text-secondary-accent/60 leading-none mt-1 uppercase font-medium">
-                Advanced Aerial Robotics Group
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation Link Strip - Increased gap to 8 */}
-          <nav className="hidden lg:flex items-center gap-8 font-mono text-[10px] tracking-wider font-semibold">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`hover:text-primary-accent transition-colors duration-200 focus-hud px-1 py-1 relative ${
-                    isActive ? "text-primary-accent font-bold" : "text-secondary-accent/80"
-                  }`}
-                >
-                  {link.name}
-                  {isActive && (
-                    <motion.span
-                      layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-primary-accent"
-                      transition={{ type: "spring", stiffness: 350, damping: 25 }}
-                    />
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Primary Call-to-Action - Cleaned & Toned Down */}
-          <div className="hidden lg:block">
-            <Magnetic>
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Brand Logo */}
+            <div className="flex items-center gap-4 shrink-0">
               <Link
-                href="/join"
-                className="group relative overflow-hidden font-mono text-[10px] font-bold border border-primary-accent bg-primary-accent px-4 py-2 hover:bg-primary-accent/90 text-white transition-all duration-300 focus-hud rounded-none flex items-center gap-1.5 hover:scale-[1.02]"
+                href="/"
+                className="flex items-center gap-4 group focus-hud"
               >
-                <span className="relative z-10 flex items-center gap-1.5">
-                  <span className="text-[11px] font-bold">↗</span>
-                  <span>JOIN US</span>
-                </span>
+                {/* Logo Container */}
+                <div className="relative w-10 h-10 flex-shrink-0 bg-black/40 border border-white/10 ring-1 ring-primary-accent/15 rounded-full overflow-hidden flex items-center justify-center transition-all duration-300 shadow-[0_0_0_1px_rgba(200,90,23,0.18)] group-hover:ring-primary-accent/25 group-hover:shadow-[0_0_0_2px_rgba(200,90,23,0.22)]">
+                  {!logoError ? (
+                    <img
+                      src="/logo.png"
+                      alt="AARG Logo"
+                      className="w-full h-full object-cover"
+                      onError={() => setLogoError(true)}
+                    />
+                  ) : (
+                    <svg
+                      viewBox="0 0 100 100"
+                      className="w-full h-full text-primary-accent"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
+                      <path
+                        d="M50 20C50 20 44 38 44 55C44 62 48 66 50 66C52 66 56 62 56 55C56 38 50 20 50 20Z"
+                        fill="currentColor"
+                        opacity="0.85"
+                      />
+                      <path
+                        d="M44 48C40 50 35 55 35 60C35 63 39 63 43 61L44 58"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M56 48C60 50 65 55 65 60C65 63 61 63 57 61L56 58"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  )}
+                </div>
+
+                {/* Text Container */}
+                <div className="flex flex-col justify-center">
+                  <span className="font-sans font-extrabold text-lg md:text-xl leading-none text-white tracking-wider transition-colors duration-250 group-hover:text-primary-accent">
+                    AARG
+                  </span>
+                  <span className="font-sans text-[10px] tracking-[0.08em] text-secondary-accent/70 leading-none mt-1 uppercase font-medium whitespace-nowrap">
+                    Advanced Aerial Robotics Group
+                  </span>
+                </div>
               </Link>
-            </Magnetic>
+            </div>
+
+            {/* Centered Desktop Navigation */}
+            <div className="hidden lg:flex flex-1 justify-center">
+              <nav className="flex items-center gap-5 font-sans text-sm tracking-wide">
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className={`relative whitespace-nowrap px-1.5 py-2 transition-all duration-200 focus-hud text-secondary-accent/70 font-medium hover:text-white hover:underline hover:underline-offset-4 decoration-primary-accent ${
+                        isActive ? "text-white font-semibold" : ""
+                      }`}
+                    >
+                      {link.name}
+                      {isActive && (
+                        <motion.span
+                          layoutId="activeNavIndicator"
+                          className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-primary-accent"
+                          transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                        />
+                      )}
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
+
+            {/* Primary Call-to-Action - Cleaned & Toned Down */}
+            <div className="flex items-center shrink-0">
+              <Magnetic>
+                <Link
+                  href="/join"
+                  className="group relative overflow-hidden whitespace-nowrap font-sans text-sm font-semibold border border-primary-accent bg-primary-accent px-5 py-2 hover:bg-primary-accent/95 text-white transition-all duration-300 focus-hud rounded-md inline-flex items-center gap-2 hover:scale-[1.02] shadow-sm hover:shadow-[0_10px_30px_rgba(200,90,23,0.16)]"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    <ChevronRight className="w-4 h-4" />
+                    <span>JOIN US</span>
+                  </span>
+                </Link>
+              </Magnetic>
+            </div>
           </div>
 
           {/* Mobile Drawer Trigger */}
@@ -203,7 +209,7 @@ export default function Header() {
                   </button>
                 </div>
 
-                <nav className="flex flex-col gap-3 font-mono text-xs">
+                <nav className="flex flex-col gap-3 font-sans text-sm">
                   {navLinks.map((link) => {
                     const isActive = pathname === link.href;
                     return (
@@ -211,10 +217,10 @@ export default function Header() {
                         key={link.name}
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className={`hover:text-primary-accent transition-colors duration-200 focus-hud py-2 ${
+                        className={`transition-colors duration-200 focus-hud py-2 ${
                           isActive
-                            ? "text-primary-accent font-bold pl-2 border-l border-primary-accent"
-                            : "text-secondary-accent/80"
+                            ? "text-primary-accent font-semibold pl-2 border-l border-primary-accent"
+                            : "text-secondary-accent/80 font-medium hover:text-white"
                         }`}
                       >
                         {link.name}
@@ -228,7 +234,7 @@ export default function Header() {
                 <Link
                   href="/join"
                   onClick={() => setIsOpen(false)}
-                  className="font-mono text-xs font-bold text-center border border-primary-accent bg-primary-accent py-3 hover:bg-primary-accent/90 text-white transition-all duration-300 focus-hud rounded-none flex items-center justify-center gap-1.5"
+                  className="font-sans text-sm font-semibold text-center border border-primary-accent bg-primary-accent py-3 hover:bg-primary-accent/90 text-white transition-all duration-300 focus-hud rounded-md inline-flex items-center justify-center gap-2"
                 >
                   <span className="font-bold">↗</span>
                   <span>JOIN US</span>
