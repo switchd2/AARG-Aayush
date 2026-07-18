@@ -50,14 +50,18 @@ export default function Footer() {
           />
         ))}
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left justify-items-center md:justify-items-stretch">
         {/* Brand Description */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-center md:items-start">
           <Link
             href="/"
             className="font-display font-bold text-lg tracking-wider text-secondary-accent flex items-center gap-2 focus-hud"
           >
-            <span className="text-primary-accent font-mono">[+]</span>
+            <img
+              src="/logo.png"
+              alt="AARG Logo"
+              className="w-8 h-8 object-contain rounded-full"
+            />
             {siteConfig.name}
           </Link>
           <p className="text-secondary-accent/70 leading-relaxed font-sans max-w-sm">
@@ -66,11 +70,11 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-center md:items-start">
           <h4 className="text-primary-accent font-bold uppercase tracking-widest text-[10px]">
             {"QUICK_LINKS"}
           </h4>
-          <nav className="grid grid-cols-2 gap-2 text-secondary-accent/80 font-medium">
+          <nav className="grid grid-cols-2 gap-2 text-secondary-accent/80 font-medium text-left">
             {quickLinks.map((link) => (
               <Link
                 key={link.name}
@@ -90,11 +94,11 @@ export default function Footer() {
         </div>
 
         {/* Contact Block */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-center md:items-start">
           <h4 className="text-primary-accent font-bold uppercase tracking-widest text-[10px]">
             {"CONTACT_TELEMETRY"}
           </h4>
-          <div className="flex flex-col gap-3 text-secondary-accent/80">
+          <div className="flex flex-col gap-3 text-secondary-accent/80 items-center md:items-start">
             <div className="flex items-center gap-2 leading-relaxed mt-1">
               <Mail className="w-4 h-4 text-primary-accent shrink-0" />
               <a
@@ -118,7 +122,7 @@ export default function Footer() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 border-t border-secondary-accent/10 mt-12 pt-6 text-secondary-accent/50">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 border-t border-secondary-accent/10 mt-12 pt-6 text-secondary-accent/50 text-center">
         © {new Date().getFullYear()} {siteConfig.name}. Student Engineering Team.
       </div>
     </footer>
