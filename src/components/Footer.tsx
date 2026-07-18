@@ -116,34 +116,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* GPS Coordinates/Telemetry panel */}
-        <div className="flex flex-col gap-4">
-          <h4 className="text-primary-accent font-bold uppercase tracking-widest text-[10px]">
-            {"SITE_METRICS"}
-          </h4>
-          <div className="border border-secondary-accent/15 bg-surface/30 p-4 relative h-32 flex flex-col justify-between">
-            <div className="hud-corner hud-corner-tl" />
-            <div className="hud-corner hud-corner-tr" />
-            <div className="hud-corner hud-corner-bl" />
-            <div className="hud-corner hud-corner-br" />
-            <div className="text-[9px] text-secondary-accent/60 uppercase flex justify-between">
-              <span>SYSTEM STATE:</span>
-              <span className="text-green-500 font-bold">ONLINE</span>
-            </div>
-            <div className="text-[9px] text-secondary-accent/60 uppercase flex justify-between">
-              <span>LATITUDE:</span>
-              <span>12.9716° N</span>
-            </div>
-            <div className="text-[9px] text-secondary-accent/60 uppercase flex justify-between">
-              <span>LONGITUDE:</span>
-              <span>77.5946° E</span>
-            </div>
-            <div className="text-[9px] text-secondary-accent/40 border-t border-secondary-accent/10 pt-2 flex justify-between">
-              <span>ESTABLISHED:</span>
-              <span>{siteConfig.foundingYear}</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 border-t border-secondary-accent/10 mt-12 pt-6 text-secondary-accent/50">
