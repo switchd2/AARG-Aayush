@@ -72,50 +72,16 @@ export default function Sponsors() {
         </div>
 
         {/* Intro Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div className="lg:col-span-8 flex flex-col gap-6">
-            <ScrollReveal delay={0.1}>
-              <div className="font-sans text-base md:text-lg text-secondary-accent/90 space-y-6 leading-relaxed">
-                <p className="font-medium text-white/95">
-                  Support the Advanced Aerial Robotics Group (AARG) at AISSMS Institute of Information Technology and help empower the next generation of engineers developing cutting-edge aerial robotics and autonomous systems.
-                </p>
-                <p className="text-secondary-accent/80 text-sm md:text-base">
-                  Your partnership enables hands-on research, technical innovation, and participation in national-level competitions while connecting your brand with a community driven by engineering excellence.
-                </p>
-              </div>
-            </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <div className="font-sans text-base md:text-lg text-secondary-accent/90 space-y-6 leading-relaxed max-w-3xl">
+            <p className="font-medium text-white/95">
+              Support the Advanced Aerial Robotics Group (AARG) at AISSMS Institute of Information Technology and help empower the next generation of engineers developing cutting-edge aerial robotics and autonomous systems.
+            </p>
+            <p className="text-secondary-accent/80 text-sm md:text-base">
+              Your partnership enables hands-on research, technical innovation, and participation in national-level competitions while connecting your brand with a community driven by engineering excellence.
+            </p>
           </div>
-
-          <div className="lg:col-span-4">
-            <ScrollReveal delay={0.2}>
-              <div className="border border-white/10 bg-surface-mid/40 backdrop-blur-sm p-6 relative">
-                {/* Tech corner accents */}
-                <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary-accent" />
-                <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary-accent" />
-                <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-primary-accent" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-primary-accent" />
-                
-                <h4 className="font-mono text-[10px] tracking-wider text-primary-accent uppercase font-bold mb-3">
-                  {"// PARTNERSHIP_STATUS"}
-                </h4>
-                <div className="space-y-3 font-mono text-xs">
-                  <div className="flex justify-between border-b border-white/5 pb-1">
-                    <span className="text-secondary-accent/50">CAMPAIGN:</span>
-                    <span className="text-green-500 font-bold">ACTIVE</span>
-                  </div>
-                  <div className="flex justify-between border-b border-white/5 pb-1">
-                    <span className="text-secondary-accent/50">DECK VERSION:</span>
-                    <span className="text-white">v2026.1</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-secondary-accent/50">TARGET GROUP:</span>
-                    <span className="text-white">AISSMS IOIT AARG</span>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* Why Sponsor Us? */}
         <div className="flex flex-col gap-8">
@@ -154,9 +120,6 @@ export default function Sponsors() {
           {/* Funding Section */}
           <ScrollReveal delay={0.1}>
             <div className="flex flex-col gap-6 p-6 md:p-8 bg-surface-mid/10 border border-white/5 rounded-md relative">
-              <div className="absolute top-0 right-4 transform -translate-y-1/2 bg-bg-base px-3 py-0.5 border border-white/10 font-mono text-[8px] text-secondary-accent/50 uppercase tracking-widest">
-                ALLOCATION_SCHEMATIC
-              </div>
               <div>
                 <span className="font-mono text-[9px] text-primary-accent uppercase tracking-wider font-bold">
                   {"// FINANCIAL SYNERGY"}
@@ -180,9 +143,6 @@ export default function Sponsors() {
           {/* Benefits Section */}
           <ScrollReveal delay={0.2}>
             <div className="flex flex-col gap-6 p-6 md:p-8 bg-surface-mid/10 border border-white/5 rounded-md relative">
-              <div className="absolute top-0 right-4 transform -translate-y-1/2 bg-bg-base px-3 py-0.5 border border-white/10 font-mono text-[8px] text-secondary-accent/50 uppercase tracking-widest">
-                RETURN_VALUE_METRICS
-              </div>
               <div>
                 <span className="font-mono text-[9px] text-primary-accent uppercase tracking-wider font-bold">
                   {"// PARTNER RETURN"}
