@@ -120,9 +120,6 @@ export default function Sponsors() {
           {/* Funding Section */}
           <ScrollReveal delay={0.1}>
             <div className="flex flex-col gap-6 p-6 md:p-8 bg-surface-mid/10 border border-white/5 rounded-md relative">
-              <div className="absolute top-0 right-4 transform -translate-y-1/2 bg-bg-base px-3 py-0.5 border border-white/10 font-mono text-[8px] text-secondary-accent/50 uppercase tracking-widest">
-                ALLOCATION_SCHEMATIC
-              </div>
               <div>
                 <span className="font-mono text-[9px] text-primary-accent uppercase tracking-wider font-bold">
                   {"// FINANCIAL SYNERGY"}
@@ -146,9 +143,6 @@ export default function Sponsors() {
           {/* Benefits Section */}
           <ScrollReveal delay={0.2}>
             <div className="flex flex-col gap-6 p-6 md:p-8 bg-surface-mid/10 border border-white/5 rounded-md relative">
-              <div className="absolute top-0 right-4 transform -translate-y-1/2 bg-bg-base px-3 py-0.5 border border-white/10 font-mono text-[8px] text-secondary-accent/50 uppercase tracking-widest">
-                RETURN_VALUE_METRICS
-              </div>
               <div>
                 <span className="font-mono text-[9px] text-primary-accent uppercase tracking-wider font-bold">
                   {"// PARTNER RETURN"}
