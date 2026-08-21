@@ -81,6 +81,13 @@ export const teamData: TeamData = {
       photoUrl: "/images/team/Hitesh%20Patil.png",
     },
     {
+      name: "Mansi Kale",
+      role: "Sponsorship Head",
+      subteam: "Leadership",
+      linkedinUrl: "https://www.linkedin.com/in/mansi-kale-7842b5386/",
+      photoUrl: "/images/team/mansi.jpeg",
+    },
+    {
       name: "Shreyas Karade",
       role: "Aerodynamics Lead",
       subteam: "Leadership",

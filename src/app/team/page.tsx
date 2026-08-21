@@ -176,11 +176,11 @@ export default function Team() {
         </div>
 
         {/* ─────────────────────────────────────────────────────────────
-            Team Leads — 4 in a row
+            Team Leads — 5 in a row
         ──────────────────────────────────────────────────────────── */}
         <div className="w-full">
           <ScrollReveal>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {leads.map((lead, idx) => (
                 <MemberCard key={lead.name} member={lead} index={idx} />
               ))}
