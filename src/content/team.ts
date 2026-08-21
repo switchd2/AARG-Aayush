@@ -84,6 +84,7 @@ export const teamData: TeamData = {
       name: "Mansi Kale",
       role: "Sponsorship Head",
       subteam: "Leadership",
+      linkedinUrl: "https://www.linkedin.com/in/mansi-kale-7842b5386/",
       photoUrl: "/images/team/mansi.jpeg",
     },
     {
