@@ -2,7 +2,9 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { ChevronRight, ArrowRight } from "lucide-react";
+import { sponsorsData } from "@/content/sponsors";
 
 import ScrollReveal from "@/components/ScrollReveal";
 import PageBackground from "@/components/PageBackground";
@@ -10,8 +12,6 @@ import PageBackground from "@/components/PageBackground";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 
 import HeroBackground from "@/components/HeroBackground";
-import AnimatedCounter from "@/components/AnimatedCounter";
-
 
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
@@ -125,7 +125,7 @@ export default function Home() {
           
           <div className="mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-2">
-              THE GROUP'S PURPOSE
+              THE GROUP&apos;S PURPOSE
             </h2>
           </div>
 
@@ -185,6 +185,87 @@ export default function Home() {
                 <p className="text-secondary-accent/75 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
                   AARG&apos;s mission is to build a strong community of innovators who thrive on competition. By designing, building, and flying UAVs for national and international challenges such as NIDAR and ISRO&apos;s IROC-U, the team transforms classroom learning into hands-on engineering experience. Students collaborate across disciplines, solve real-world technical challenges under competitive environments, and graduate prepared for careers in aerospace, robotics, and advanced technology, while strengthening AISSMS IoIT&apos;s culture of innovation and engineering excellence.
                 </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* SECTION: OFFICIAL HARDWARE & AVIONICS PARTNER */}
+      <section className="pt-10 md:pt-14 pb-8 md:pb-12 bg-surface relative z-10 px-4 md:px-8">
+        <PageBackground />
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-secondary-accent/15 pb-4">
+            <div>
+              <span className="font-mono text-[10px] text-primary-accent uppercase tracking-widest flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-primary-accent animate-pulse" />
+                INDUSTRIAL COLLABORATION
+              </span>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary-accent uppercase mt-1">
+                Official Hardware Partner
+              </h2>
+            </div>
+            <Link
+              href="/sponsors"
+              className="font-mono text-xs text-primary-accent hover:text-primary-accent/80 transition-colors inline-flex items-center gap-1.5 self-start sm:self-auto"
+            >
+              Full Sponsorship Details <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <ScrollReveal delay={0.1}>
+            <div className="relative bg-surface-mid/30 border border-primary-accent/25 hover:border-primary-accent/45 rounded-lg p-6 md:p-8 transition-colors">
+              {/* Corner decorative accents */}
+              <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-primary-accent/70" />
+              <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-primary-accent/70" />
+              <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b-2 border-l-2 border-primary-accent/70" />
+              <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-primary-accent/70" />
+
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
+                {/* Logo card */}
+                <div className="bg-white rounded-md p-4 flex items-center justify-center border border-white/20 shrink-0 w-full sm:w-[220px] h-[100px] shadow-sm">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={sponsorsData.featuredSponsor.logo}
+                      alt={sponsorsData.featuredSponsor.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 flex flex-col gap-2.5 text-center md:text-left">
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+                    <span className="font-mono text-[9px] bg-primary-accent/15 text-primary-accent px-2 py-0.5 rounded border border-primary-accent/30 font-semibold uppercase tracking-wider">
+                      {sponsorsData.featuredSponsor.tier}
+                    </span>
+                    <span className="font-mono text-[9px] bg-white/5 text-secondary-accent/70 px-2 py-0.5 rounded uppercase tracking-wider">
+                      {sponsorsData.featuredSponsor.role}
+                    </span>
+                  </div>
+
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-white uppercase tracking-tight">
+                    {sponsorsData.featuredSponsor.name}
+                  </h3>
+
+                  <p className="text-secondary-accent/80 font-sans text-sm leading-relaxed max-w-3xl">
+                    {sponsorsData.featuredSponsor.summary}
+                  </p>
+
+                  {/* Hardware Feature Pills */}
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1.5">
+                    {sponsorsData.featuredSponsor.hardwareProvided.map((hw, idx) => (
+                      <span
+                        key={idx}
+                        className="font-mono text-[10px] bg-surface-high/60 border border-white/10 text-secondary-accent/90 px-2.5 py-1 rounded-sm flex items-center gap-1.5"
+                      >
+                        <span className="w-1 h-1 bg-primary-accent rounded-full" />
+                        {hw.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </ScrollReveal>
