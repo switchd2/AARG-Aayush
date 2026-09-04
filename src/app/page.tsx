@@ -213,7 +213,8 @@ export default function Home() {
             </Link>
           </div>
 
-          <ScrollReveal delay={0.1}>
+          {sponsorsData.sponsors.map((sponsor, idx) => (
+            <ScrollReveal key={sponsor.id} delay={0.1 + idx * 0.05}>
             <div className="relative bg-surface-mid/30 border border-primary-accent/25 hover:border-primary-accent/45 rounded-lg p-6 md:p-8 transition-colors">
               {/* Corner decorative accents */}
               <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-primary-accent/70" />
@@ -226,8 +227,8 @@ export default function Home() {
                 <div className="bg-white rounded-md p-4 flex items-center justify-center border border-white/20 shrink-0 w-full sm:w-[220px] h-[100px] shadow-sm">
                   <div className="relative w-full h-full">
                     <Image
-                      src={sponsorsData.featuredSponsor.logo}
-                      alt={sponsorsData.featuredSponsor.name}
+                      src={sponsor.logo}
+                      alt={sponsor.name}
                       fill
                       className="object-contain"
                     />
@@ -238,26 +239,26 @@ export default function Home() {
                 <div className="flex-1 flex flex-col gap-2.5 text-center md:text-left">
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                     <span className="font-mono text-[9px] bg-primary-accent/15 text-primary-accent px-2 py-0.5 rounded border border-primary-accent/30 font-semibold uppercase tracking-wider">
-                      {sponsorsData.featuredSponsor.tier}
+                      {sponsor.tier}
                     </span>
                     <span className="font-mono text-[9px] bg-white/5 text-secondary-accent/70 px-2 py-0.5 rounded uppercase tracking-wider">
-                      {sponsorsData.featuredSponsor.role}
+                      {sponsor.role}
                     </span>
                   </div>
 
                   <h3 className="font-display text-xl md:text-2xl font-bold text-white uppercase tracking-tight">
-                    {sponsorsData.featuredSponsor.name}
+                    {sponsor.name}
                   </h3>
 
                   <p className="text-secondary-accent/80 font-sans text-sm leading-relaxed max-w-3xl">
-                    {sponsorsData.featuredSponsor.summary}
+                    {sponsor.summary}
                   </p>
 
                   {/* Hardware Feature Pills */}
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1.5">
-                    {sponsorsData.featuredSponsor.hardwareProvided.map((hw, idx) => (
+                    {sponsor.hardwareProvided.map((hw, hwIdx) => (
                       <span
-                        key={idx}
+                        key={hwIdx}
                         className="font-mono text-[10px] bg-surface-high/60 border border-white/10 text-secondary-accent/90 px-2.5 py-1 rounded-sm flex items-center gap-1.5"
                       >
                         <span className="w-1 h-1 bg-primary-accent rounded-full" />
@@ -268,7 +269,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          ))}
         </div>
       </section>
 

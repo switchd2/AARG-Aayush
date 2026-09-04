@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export default function Sponsors() {
-  const { featuredSponsor, whySponsor, fundingItems, benefitsItems } = sponsorsData;
+  const { sponsors, whySponsor, fundingItems, benefitsItems } = sponsorsData;
 
   const iconMap: Record<string, React.ReactNode> = {
     Award: <Award className="w-5 h-5 text-primary-accent" />,
@@ -47,8 +47,9 @@ export default function Sponsors() {
           </p>
         </div>
 
-        {/* FEATURED SPONSOR: YARI ROBOTICS */}
-        <ScrollReveal delay={0.05}>
+        {/* SPONSORS & TECHNICAL PARTNERS */}
+        {sponsors.map((sponsor, idx) => (
+        <ScrollReveal key={sponsor.id} delay={0.05 + idx * 0.05}>
           <div className="bg-surface-mid/30 border border-secondary-accent/15 rounded-lg p-6 md:p-8 relative">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
               
@@ -56,8 +57,8 @@ export default function Sponsors() {
               <div className="bg-white rounded-md p-4 flex items-center justify-center border border-white/20 shrink-0 w-full sm:w-[220px] h-[110px] shadow-sm">
                 <div className="relative w-full h-full">
                   <Image
-                    src={featuredSponsor.logo}
-                    alt={featuredSponsor.name}
+                    src={sponsor.logo}
+                    alt={sponsor.name}
                     fill
                     className="object-contain"
                     priority
@@ -69,26 +70,26 @@ export default function Sponsors() {
               <div className="flex-1 flex flex-col gap-3 text-center md:text-left">
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                   <span className="font-mono text-[9px] bg-primary-accent/15 text-primary-accent px-2 py-0.5 rounded border border-primary-accent/30 font-semibold uppercase tracking-wider">
-                    {featuredSponsor.tier}
+                    {sponsor.tier}
                   </span>
                   <span className="font-mono text-[9px] bg-white/5 text-secondary-accent/70 px-2 py-0.5 rounded uppercase tracking-wider">
-                    {featuredSponsor.role}
+                    {sponsor.role}
                   </span>
                 </div>
 
                 <h2 className="font-display text-2xl font-bold text-white uppercase tracking-tight">
-                  {featuredSponsor.name}
+                  {sponsor.name}
                 </h2>
 
                 <p className="font-sans text-sm text-secondary-accent/80 leading-relaxed max-w-3xl">
-                  {featuredSponsor.summary}
+                  {sponsor.summary}
                 </p>
 
                 {/* Hardware Provided Tags */}
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2">
-                  {featuredSponsor.hardwareProvided.map((hw, idx) => (
+                  {sponsor.hardwareProvided.map((hw, hwIdx) => (
                     <div
-                      key={idx}
+                      key={hwIdx}
                       className="font-mono text-[10px] bg-surface-high/60 border border-white/10 text-secondary-accent/90 px-2.5 py-1 rounded-sm flex items-center gap-1.5"
                     >
                       <span className="w-1 h-1 bg-primary-accent rounded-full" />
@@ -102,6 +103,7 @@ export default function Sponsors() {
             </div>
           </div>
         </ScrollReveal>
+        ))}
 
         {/* Why Sponsor Us? */}
         <div className="flex flex-col gap-6">
